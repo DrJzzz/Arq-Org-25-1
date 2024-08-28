@@ -24,17 +24,17 @@ int main (int argc, char *argv[])
 
     if (opcion == 'A')
     {
-        printf("Media aritmetica: %.2f\n", media_aritmetica(datos, argc - 2));
+        printf("Media aritmetica: %.5f\n", media_aritmetica(datos, argc - 2));
         return 0;
     }
     else if (opcion == 'H')
     {
-        printf("Media harmonica: %.2f\n", media_harmonica(datos, argc - 2));
+        printf("Media harmonica: %.5f\n", media_harmonica(datos, argc - 2));
         return 0;
     }
     else if (opcion == 'G')
     {
-        printf("Media geometrica: %.2f\n", media_geometrica(datos, argc - 2));
+        printf("Media geometrica: %.5f\n", media_geometrica(datos, argc - 2));
         return 0;
     }
     else
@@ -65,11 +65,11 @@ float media_harmonica(float datos[], int n)
 }
 
 float media_geometrica(float datos[], int n)
-{
-    float mult = 1;
-    for (int i = 0; i < n; i++)
+{   
+    float mult = datos[0];
+    for (int i = 1; i < n; i++)
     {
         mult *= datos[i];
     }
-    return pow(mult, 1 / n);
+    return pow(mult, (float)1 / n);
 }
