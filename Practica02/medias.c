@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
 float media_aritmetica(float datos[], int n);
@@ -58,7 +59,7 @@ float media_harmonica(float datos[], int n)
     float bottom = 0;
     for (int i = 0; i < n; i++)
     {
-        bottom += 1 / datos[i]
+        bottom += 1 / datos[i];
     }
     return n / bottom;
 }
@@ -70,5 +71,5 @@ float media_geometrica(float datos[], int n)
     {
         mult *= datos[i];
     }
-    return pow(sum, 1 / n);
+    return pow(mult, 1 / n);
 }
