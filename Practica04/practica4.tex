@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\title{Practica 4}
+\author{Josué Menchaca - 315294165 \\ Violeta Ardeni Castillo Camacho - 318214328}
+\date{19 de Septiembre, 2024}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+    \item \textbf{Introducción a la definición de ALU} \\
+    La ALU, o Unidad Aritmético-Lógica, es la parte del procesador que se encarga de hacer todas las operaciones aritméticas y lógicas. Su funcionamiento es operacional: suma, resta, hace comparaciones, AND, OR entre otras operaciones.
+    Es parte fundamental de la CPU, que es la que realmente toma las decisiones en una computadora. Todo lo que una máquina procesa.
+    
+    Las partes más importantes de la ALU son:
+    \begin{itemize}
+        \item \textbf{Circuito operacional:} Es el corazón de la ALU, donde se hacen las operaciones.
+        \item \textbf{Registros de entrada:} Donde se guardan los datos que se van a procesar.
+        \item \textbf{Registro acumulador:} Un lugar donde se guardan resultados intermedios.
+        \item \textbf{Registro de estados:} Indica cómo van las operaciones, si hay errores, desbordamientos, etc.
+    \end{itemize}
+
+\section{Preguntas:} \\
+
+\item ¿Quién propuso por primera vez el diseño de una ALU? ¿Para que computador se propuso? 
+
+El diseño de la ALU lo propuso por primera vez John von Neumann en 1945. Lo hizo como parte del informe en el que proponía las bases para la construcción del EDVAC, que fue uno de los primeros computadores electrónicos. La ALU era una parte clave de su idea para un computador que pudiera almacenar programas, algo que hoy damos por hecho.
+
+
+\item ¿Qué es VHDL? ¿Cómo se ve un full-adder en VHDL? 
+
+VHDL es un lenguaje de descripción de circuitos electrónicos digitales que utiliza distintos niveles de abstracción. El significado de las siglas VHDL es VHSIC (Very High Speed Integrated Circuits) Hardware Description Language. 
+Permite acelerar el proceso de diseño. VHDL es un lenguaje de descripción de hardware, que permite describir circuitos síncronos y asíncronos.
+
+
+\begin{center}
+ \includegraphics[scale=0.5]{img/full.png}
+\end{center}
+
+\item ¿Qué operaciones aritméticas y lógicas son básicas para un procesador?\\
+Justifica tu respuesta.
+
+Las operaciones aritméticas y lógicas son esenciales para el procesamiento de datos en un procesador y para la ejecución de programas en un sistema computacional. Cada una de estas operaciones es necesaria para realizar cálculos matemáticos y lógicos complejos, tomar decisiones y controlar el flujo de un programa.
+  
+\begin{itemize}
+    \item Suma: La suma es una operación aritmética básica que se utiliza en casi todos los programas. 
+
+    \item Resta: La resta es otra operación aritmética básica que se utiliza en los programas para realizar operaciones matemáticas.
+
+    \item Multiplicación: La multiplicación es una operación aritmética básica que se utiliza en los programas para realizar operaciones matemáticas complejas.
+
+    \item División: La división es una operación aritmética básica que se utiliza en los programas para realizar operaciones matemáticas complejas. 
+    
+    \item Comparación: Las operaciones lógicas de comparación, son esenciales para la lógica de los programas. Son fundamentales para tomar decisiones y para el control de flujo de un programa.
+
+    \item Lógica binaria: Las operaciones lógicas binarias, como AND, OR y NOT, son esenciales para el procesamiento de datos en los programas.
+
+\end{itemize}
+
+Todas estas operaciones hacen que el procesador pueda ejecutar instrucciones, manejar datos, y seguir la lógica de un programa.
+
+
+\item El diseño utilizado para realizar la adición resulta ser ineficiente, ¿por qué? ¿Qué tipo de sumador resulta ser mas eficiente?
+
+
+    El diseño básico de un sumador, conocido como \textit{ripple-carry adder}, no es muy eficiente porque necesita esperar que el acarreo se propague a través de todos los bits. Esto hace que el tiempo total de cálculo sea mayor, especialmente cuando estamos sumando números grandes. Un diseño más eficiente es el \textit{carry-lookahead adder}, que reduce el tiempo al calcular los acarreos en paralelo, mejorando la velocidad general.
+
+
+
+
+\item Bajo este diseño, en la ALU se calculan todas las operaciones de forma simultanea pero solo se entrega un resultado, ¿se realiza trabajo inútil?
+¿Toma tiempo adicional? ¿Cuál es el costo?
+
+    Sí, cuando se calculan múltiples operaciones al mismo tiempo, aunque solo se use una de ellas, el trabajo extra no es realmente necesario. Esto puede incrementar los costos de hardware porque se necesitan más compuertas lógicas para calcular todo a la vez. También podría aumentar el consumo de energía y en algunos casos, el tiempo total, ya que se están utilizando más recursos de los necesarios.
+
+
+
+
+\item ¿Cuantas operaciones mas podemos agregar al diseño de esta ALU? ¿Qué tendríamos que modificar para realizar mas operaciones?
+
+ Se pueden agregar más operaciones al diseño de una ALU, pero habría que modificar el circuito lógico. Por un lado se necesitaran mas bits de selección para el multiplexor y además se necesitaría agregar los circuitos que calculan dichas operaciones.
+ 
+
+\end{enumerate}
+
+
+
+\end{document}
